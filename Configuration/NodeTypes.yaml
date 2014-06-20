@@ -1,3 +1,22 @@
+"TYPO3.Neos.NodeTypes:Page":
+  ui:
+    inspector:
+      groups:
+        'image':
+          label: 'Image'
+          position: 10
+  properties:
+    'headerImage':
+      type: 'TYPO3\Media\Domain\Model\ImageVariant'
+      ui:
+        label: 'Header Image'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+
+
+
+
 "DevDays.NeosWorkshop:Section":
   superTypes:
     - TYPO3.Neos:Content
