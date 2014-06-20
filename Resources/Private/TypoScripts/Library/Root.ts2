@@ -45,6 +45,9 @@ page = Page {
 			}
 		}
 
+		homepage = ${site}
+		headerImage = ${q(node).property('headerImage')}
+
 		javascripts.site = TYPO3.TypoScript:Template {
 			templatePath = 'resource://DevDays.NeosWorkshop/Private/Templates/Page/Default.html'
 			sectionName = 'bodyScripts'
