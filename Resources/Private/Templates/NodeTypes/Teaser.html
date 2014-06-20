@@ -3,4 +3,14 @@
 	<span class="{icon} type-icon"></span>
 
 	<neos:contentElement.editable property='title' />
+
+	<neos:contentElement.editable property='text' />
+
+	<f:if condition="{link}">
+		<p>
+			<neos:link.node node="{link}" class="btn btn-default">
+				{f:if(condition:linktext, then: linktext, else: 'No link text specified')}
+			</neos:link.node>
+		</p>
+	</f:if>
 </div>

@@ -144,3 +144,19 @@
                 label: 'User'
               'icon-headphones':
                 label: 'Headphones'
+
+    linktext:
+      type: string
+      defaultValue: 'Link here'
+      ui:
+        label: 'Link Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'style'
+
+    link:
+      type: reference # secret sauce of magic!!
+      ui:
+        label: 'Link Target'
+        inspector:
+          group: 'style'
