@@ -94,3 +94,42 @@
           group: 'style'
 
 
+
+
+
+'DevDays.NeosWorkshop:Teaser':
+  superTypes:
+    - 'TYPO3.Neos.NodeTypes:Headline'
+    - 'TYPO3.Neos.NodeTypes:Text'
+  ui:
+    label: 'Teaser'
+    icon: 'icon-file-text'
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 10
+
+  properties:
+    title:
+      defaultValue: '<h2>Enter headline here</h2>'
+    icon:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Icon'
+        reloadIfChanged: true
+        inspector:
+          group: style
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Select Icon'
+            values:
+              '':
+                label: ''
+              'icon-pacman':
+                label: 'PACMAN!'
+              'icon-user':
+                label: 'User'
+              'icon-headphones':
+                label: 'Headphones'
