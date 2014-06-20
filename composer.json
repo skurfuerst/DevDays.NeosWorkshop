@@ -1,0 +1,14 @@
+{
+    "name": "devdays/neosworkshop",
+    "type": "typo3-flow-site",
+    "description": "Add description here",
+    "require": {
+        "typo3/neos": "*",
+        "typo3/neos-nodetypes": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "DevDays\\NeosWorkshop": "Classes"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<site nodeName="neosworkshop" type="TYPO3.Neos.NodeTypes:Page">
+		<properties>
+			<name>Neos Coffee Roastery</name>
+			<title><![CDATA[Home]]></title>
+			<state>1</state>
+			<siteResourcesPackageKey>DevDays.NeosWorkshop</siteResourcesPackageKey>
+		</properties>
+		<node type="TYPO3.Neos:ContentCollection" nodeName="main">
+			<node type="TYPO3.Neos.NodeTypes:Text" nodeName="text1">
+				<properties>
+					<text><![CDATA[<p>This is the homepage</p>]]></text>
+				</properties>
+			</node>
+		</node>
+		<node type="TYPO3.Neos.NodeTypes:Page" nodeName="subpage">
+			<properties>
+				<title>A sub page</title>
+			</properties>
+			<node type="TYPO3.Neos:ContentCollection" nodeName="main">
+				<node type="TYPO3.Neos.NodeTypes:Text" nodeName="text1">
+					<properties>
+						<text><![CDATA[<p>This is the first sub page</p>]]></text>
+					</properties>
+				</node>
+			</node>
+		</node>
+	</site>
+</root>
