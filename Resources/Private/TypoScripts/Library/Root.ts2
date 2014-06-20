@@ -19,7 +19,21 @@ page = Page {
 		sectionName = 'body'
 		parts {
 			menu = Menu {
+
+				# this line is not really needed, it's just needed
+				# if you want to completely override the menu rendering.
+				#
+				# In our case, we just copied the default Menu HTML markup.
 				templatePath = 'resource://DevDays.NeosWorkshop/Private/Templates/TypoScriptObjects/Menu.html'
+
+
+				attributes.class = 'nav navbar-nav'
+
+				# we want to see the same menu everywhere, and
+				# not the childNodes
+				entryLevel = 1
+
+				current.attributes.class = 'active'
 			}
 			breadcrumb = Breadcrumb
 		}
