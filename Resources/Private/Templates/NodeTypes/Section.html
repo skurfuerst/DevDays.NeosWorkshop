@@ -1,4 +1,8 @@
-<section class="{background} centered border-top">
+<section class="{background}
+	{f:if(condition: centered, then: 'centered')}
+	{f:if(condition: noPadding, then: 'no-padding')}
+	{border}
+	">
 	<div class="container">
 		HURZ my section
 	</div>

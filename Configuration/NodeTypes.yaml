@@ -35,3 +35,38 @@
               'brown-bg':
                 label: 'Brown'
 
+    'border':
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Border'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Select Borders'
+            values:
+              '':
+                label: 'No Border'
+              'border-top':
+                label: 'Border Top'
+              'border-top-simple':
+                label: 'Simple Border Top'
+    'centered':
+      type: boolean
+      ui:
+        label: 'Center?'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+
+    'noPadding':
+      type: boolean
+      ui:
+        label: 'No Padding?'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+
+
