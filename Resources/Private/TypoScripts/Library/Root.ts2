@@ -79,3 +79,19 @@ prototype(DevDays.NeosWorkshop:Section) {
 
 
 
+
+prototype(TYPO3.Neos.NodeTypes:MultiColumn) {
+	attributes.class = 'row'
+
+	# this makes a variable called "multiColumnIteration"
+	# available to nested TypoScript objects; and this is
+	# used INSIDE MultiColumnItem
+	columns.iterationName = 'multiColumnIteration'
+}
+
+
+prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+	# "node" is a SINGLE COLUMN, and its parent is
+	# (by convention) the MultiColumn itself.
+	attributes.class = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+}
