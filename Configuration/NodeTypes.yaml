@@ -23,4 +23,14 @@
         inspector:
           group: 'style' # references the group defined a few lines above
 
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Select Background Color'
+            values:
+              'white':
+                label: 'White'
+              'beige-bg':
+                label: 'Beige'
+              'brown-bg':
+                label: 'Brown'
 
