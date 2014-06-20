@@ -28,30 +28,16 @@
 					</a>
 				</div>
 				<nav class="collapse navbar-collapse" role="navigation">
-					<ul class="nav navbar-nav">
+					{parts.menu -> f:format.raw()}
+					<!--<ul class="nav navbar-nav">
 						<li class="active">
 							<a href="MainTemplate.html">Home</a>
 						</li>
-						<li>
-							<a href="CoffeeBlog.html">Coffee Blog</a>
-						</li>
-						<li>
-							<a href="Contact.html">Contact</a>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="About.html">About</a>
-						</li>
-					</ul>
+					-->
 				</nav>
 			</div>
 		</header>
 
-
-		<nav class="menu">
-			{parts.menu -> f:format.raw()}
-		</nav>
 		<nav class="breadcrumb">
 			{parts.breadcrumb -> f:format.raw()}
 		</nav>
