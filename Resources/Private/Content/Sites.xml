@@ -1,30 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<site nodeName="neosworkshop" type="TYPO3.Neos.NodeTypes:Page">
-		<properties>
-			<name>Neos Coffee Roastery</name>
-			<title><![CDATA[Home]]></title>
-			<state>1</state>
-			<siteResourcesPackageKey>DevDays.NeosWorkshop</siteResourcesPackageKey>
-		</properties>
-		<node type="TYPO3.Neos:ContentCollection" nodeName="main">
-			<node type="TYPO3.Neos.NodeTypes:Text" nodeName="text1">
-				<properties>
-					<text><![CDATA[<p>This is the homepage</p>]]></text>
-				</properties>
-			</node>
-		</node>
-		<node type="TYPO3.Neos.NodeTypes:Page" nodeName="subpage">
-			<properties>
-				<title>A sub page</title>
-			</properties>
-			<node type="TYPO3.Neos:ContentCollection" nodeName="main">
-				<node type="TYPO3.Neos.NodeTypes:Text" nodeName="text1">
-					<properties>
-						<text><![CDATA[<p>This is the first sub page</p>]]></text>
-					</properties>
-				</node>
-			</node>
-		</node>
-	</site>
+ <site identifier="f6bc9fd4-82b6-d570-2b4c-234e05a3ec35" type="TYPO3.Neos.NodeTypes:Page" nodeName="neosworkshop">
+  <properties>
+   <name>Neos Coffee Roastery</name>
+   <title>Home</title>
+   <state>1</state>
+   <siteResourcesPackageKey>DevDays.NeosWorkshop</siteResourcesPackageKey>
+  </properties>
+  <node identifier="29fc09ba-9129-47f6-c8cc-739b664c6718" type="TYPO3.Neos:ContentCollection" nodeName="main">
+   <node identifier="6a03274d-336a-8bb1-867b-64b066c3e56e" type="DevDays.NeosWorkshop:Section" nodeName="node-53a40bb399d3a">
+    <properties>
+     <background>white</background>
+     <border></border>
+    </properties>
+    <node identifier="cfb1c71f-2d68-879d-5f0b-90b89d5d9ffd" type="TYPO3.Neos:ContentCollection" nodeName="content">
+     <node identifier="7e6b85bd-ec55-ee3d-eb52-dc9e9eb345a6" type="TYPO3.Neos.NodeTypes:TwoColumn" nodeName="node-53a40bbd49684">
+      <properties>
+       <layout>6-6</layout>
+      </properties>
+      <node identifier="648b65ce-88e4-0bc3-06ff-8191228098b8" type="TYPO3.Neos:ContentCollection" nodeName="column0">
+       <node identifier="1e334d27-6c75-8600-75df-bd589a748073" type="DevDays.NeosWorkshop:Teaser" nodeName="node-53a40bc276f96">
+        <properties>
+         <title><![CDATA[<h2>Coffee Rocks</h2>]]></title>
+         <text><![CDATA[<p>Rock-Solid Coffee Drinking</p>]]></text>
+         <icon>icon-pacman</icon>
+         <linktext>Blog</linktext>
+         <link __type="reference">
+          <node identifier="b31b9d37-cb72-d0e2-0806-ad9ebaac31aa"/>
+         </link>
+        </properties>
+       </node>
+      </node>
+      <node identifier="c29a0292-8442-5595-6e6e-ec6911e99780" type="TYPO3.Neos:ContentCollection" nodeName="column1">
+       <node identifier="5b07dc25-a484-0ea8-45b3-7ae9abe8637b" type="DevDays.NeosWorkshop:Teaser" nodeName="node-53a40c078d271">
+        <properties>
+         <title><![CDATA[<h2>... like Neos</h2>]]></title>
+         <text><![CDATA[<p>I hope you think so, too :-)</p>]]></text>
+         <icon>icon-user</icon>
+         <linktext>Contact us</linktext>
+         <link __type="reference">
+          <node identifier="bea14b2e-5983-e5f8-a7a5-8654e8e45a55"/>
+         </link>
+        </properties>
+        <node identifier="19fb2f22-72a5-c506-a824-de1b0fa86e85" type="TYPO3.Neos:ContentCollection" nodeName="content"/>
+       </node>
+      </node>
+     </node>
+    </node>
+   </node>
+  </node>
+  <node identifier="bea14b2e-5983-e5f8-a7a5-8654e8e45a55" type="TYPO3.Neos.NodeTypes:Page" nodeName="contact">
+   <properties>
+    <title>Contact</title>
+    <layout></layout>
+    <subpageLayout></subpageLayout>
+    <headerImage __type="object" __classname="TYPO3\Media\Domain\Model\ImageVariant">
+     <processingInstructions><![CDATA[a:2:{i:0;a:2:{s:7:"command";s:4:"crop";s:7:"options";a:2:{s:5:"start";a:2:{s:1:"x";i:0;s:1:"y";i:0;}s:4:"size";a:2:{s:5:"width";d:2011.0000000000002;s:6:"height";i:672;}}}i:1;a:2:{s:7:"command";s:6:"resize";s:7:"options";a:1:{s:4:"size";a:2:{s:5:"width";i:2011;s:6:"height";i:671;}}}}]]></processingInstructions>
+     <originalImage __type="object" __classname="TYPO3\Media\Domain\Model\Image" __identifier="165fc21b-2c27-275b-8847-567081b92d83">
+      <resource __type="object" __classname="TYPO3\Flow\Resource\Resource" __identifier="b326f2fa-aca6-57e7-7350-8405101c8444">
+       <filename>header-contact.jpg</filename>
+       <hash>21e7b3f9f016a0c830da6542daf52ebbbd14a09b</hash>
+      </resource>
+     </originalImage>
+    </headerImage>
+   </properties>
+   <node identifier="4a3ab3a0-2e85-2659-5077-8eb5bc9e7555" type="TYPO3.Neos:ContentCollection" nodeName="main"/>
+   <node identifier="5fb57f50-77b0-8f52-815b-311a7860b570" type="TYPO3.Neos:ContentCollection" nodeName="teaser"/>
+  </node>
+  <node identifier="b31b9d37-cb72-d0e2-0806-ad9ebaac31aa" type="TYPO3.Neos.NodeTypes:Page" nodeName="blog">
+   <properties>
+    <title>Blog</title>
+   </properties>
+   <node identifier="9d8eb56c-cf7d-94f8-261a-89ca8d62885c" type="TYPO3.Neos:ContentCollection" nodeName="main"/>
+   <node identifier="fa05b2d0-247e-d270-7d31-9d32e652bbe8" type="TYPO3.Neos:ContentCollection" nodeName="teaser"/>
+  </node>
+ </site>
 </root>
