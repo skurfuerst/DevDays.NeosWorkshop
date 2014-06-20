@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Little Bean Roastery</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../Css/main.css">
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+		function initialize() {
+			var map_canvas = document.getElementById('map_canvas');
+			var map_options = {
+				center: new google.maps.LatLng(0, 0),
+				zoom: 1,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(map_canvas, map_options)
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
+</head>
+<body>
+<div class="full-height">
+	<header class="navbar navbar-inverse" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="MainTemplate.html" class="navbar-brand">
+					<img src="../Images/logo-01.svg" alt="">
+				</a>
+			</div>
+			<nav class="collapse navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="MainTemplate.html">Home</a>
+					</li>
+					<li>
+						<a href="CoffeeBlog.html">Coffee Blog</a>
+					</li>
+					<li class="active">
+						<a href="Contact.html">Contact</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="About.html">About</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div role="main">
+		<section class="white centered no-padding">
+			<div class="keyvisual" style="background-image: url(../Images/header-contact.jpg)"></div>
+		</section>
+		<section class="white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<form enctype="multipart/form-data" method="post" id="contact-form" action="Contact.html">
+							<fieldset>
+								<legend>Contact</legend>
+								<div class="form-group clearfix">
+									<label for="contact-form-name">Name<span class="required">*</span></label>
+
+									<div class="input">
+										<input placeholder="Name" class="form-control" id="contact-form-name" type="text" name="--contact-form[name]" value="">
+									</div>
+								</div>
+
+								<div class="form-group clearfix">
+									<label for="contact-form-email">Email<span class="required">*</span></label>
+									<div class="input">
+										<input placeholder="Email" class="form-control" id="contact-form-email" type="text" name="--contact-form[email]" value="">
+									</div>
+								</div>
+
+								<div class="form-group clearfix">
+									<label for="contact-form-message">Message<span class="required">*</span></label>
+									<div class="input">
+										<textarea placeholder="Your Message" class="form-control" id="contact-form-message" name="--contact-form[message]"></textarea>
+									</div>
+								</div>
+							</fieldset>
+							<div class="actions">
+								<nav class="form-navigation">
+									<ul>
+										<li class="next submit">
+											<button class="btn btn-primary" type="submit" name="submit" value="1">Send</button>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6">
+						<div id="map_canvas"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="push"></div>
+</div>
+
+<footer class="brown-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<p>dfgsdgs</p>
+			</div>
+			<div class="col-sm-6">
+				<ul class="social">
+					<li><a href="#" class="icon-facebook"><span>Facebook</span></a></li>
+					<li><a href="#" class="icon-twitter"><span>Twitter</span></a></li>
+					<li><a href="#" class="icon-google-plus"><span>G+</span></a></li>
+					<li><a href="#" class="icon-xing"><span>Xing</span></a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<p>dfgsdgs</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- important scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../Scripts/Vendor/Bootstrap/transition.js"></script>
+<script src="../Scripts/Vendor/Bootstrap/carousel.js"></script>
+</body>
+</html>
