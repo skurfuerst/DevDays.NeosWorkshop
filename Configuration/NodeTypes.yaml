@@ -4,9 +4,14 @@
     # ... you could add more supertypes here,
     # because we have multiple inheritance, yeah!
 
+  childNodes:
+    'content':
+      type: TYPO3.Neos:ContentCollection
+
   ui:
     label: 'Coffee Content Section'
     icon: 'icon-columns'
+    inlineEditable: true
 
     inspector:
       groups:

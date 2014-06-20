@@ -51,3 +51,27 @@ page = Page {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+prototype(DevDays.NeosWorkshop:Section) {
+	content = TYPO3.Neos:ContentCollection {
+		nodePath = 'content'
+	}
+}
+
+
+
+
+
+
+
+
