@@ -113,6 +113,17 @@
   properties:
     title:
       defaultValue: '<h2>Enter headline here</h2>'
+      ui:
+        aloha:
+          format:
+            h1: FALSE
+            h2: TRUE
+            h3: TRUE
+            h4: TRUE
+            h5: FALSE
+            h6: FALSE
+
+
     icon:
       type: string
       defaultValue: ''
