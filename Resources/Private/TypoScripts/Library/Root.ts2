@@ -46,6 +46,7 @@ page = Page {
 		}
 
 		homepage = ${site}
+		homepageTitle = ${q(site).property('title')}
 		headerImage = ${q(node).property('headerImage')}
 
 		javascripts.site = TYPO3.TypoScript:Template {
