@@ -20,6 +20,7 @@
       defaultValue: 'white'
       ui:
         label: 'Background Color'
+        reloadIfChanged: true
         inspector:
           group: 'style' # references the group defined a few lines above
 
