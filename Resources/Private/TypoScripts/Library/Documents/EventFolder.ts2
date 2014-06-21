@@ -10,6 +10,24 @@ prototype(DevDays.NeosWorkshop:EventFolder) < prototype(TYPO3.TypoScript:Templat
 
 	events = ${q(node).children('[instanceof DevDays.NeosWorkshop:Event]')}
 
+	eventRenderer = TYPO3.TypoScript:Case {
+
+		default {
+			@position = 'end 9999'
+			condition = TRUE
+
+			renderer = TYPO3.TypoScript:Template {
+				templatePath = 'resource://DevDays.NeosWorkshop/Private/Templates/NodeTypes/EventFolder.html'
+				sectionName = 'singleEvent'
+
+				title = ${q(node).property('title')}
+				eventDate = ${q(node).property('eventDate')}
+
+				node = ${node}
+			}
+		}
+	}
+
 }
 
 
