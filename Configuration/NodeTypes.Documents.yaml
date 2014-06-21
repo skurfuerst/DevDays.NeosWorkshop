@@ -32,3 +32,10 @@
         label: 'Event Date'
         inspector:
           group: 'eventProperties'
+
+'DevDays.NeosWorkshop:EventFolder':
+  superTypes: ['TYPO3.Neos:Document']
+
+  ui:
+    label: 'Coffee Roasting EventFolder'
+    icon: 'icon-suitcase'

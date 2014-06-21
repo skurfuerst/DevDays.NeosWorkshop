@@ -1,0 +1,19 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<section class="beige-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Coffee Roasting Events (Hot, Hot, Hot)</h1>
+			</div>
+		</div>
+		<div class="row">
+			<f:for each="{events}" as="event">
+				<div class="article-list-element">
+					<h2>{event.properties.title}</h2>
+					<p>{event.properties.eventDate -> f:format.date()}</p>
+					<p><a class="btn btn-default" href="{neos:uri.node(node: event)}">Details about this</a></p>
+				</div>
+			</f:for>
+		</div>
+	</div>
+</section>
