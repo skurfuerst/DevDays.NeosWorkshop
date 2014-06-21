@@ -74,5 +74,40 @@
    <node identifier="9d8eb56c-cf7d-94f8-261a-89ca8d62885c" type="TYPO3.Neos:ContentCollection" nodeName="main"/>
    <node identifier="fa05b2d0-247e-d270-7d31-9d32e652bbe8" type="TYPO3.Neos:ContentCollection" nodeName="teaser"/>
   </node>
+  <node identifier="33884d89-ce01-b320-acba-05cde861d8f6" type="DevDays.NeosWorkshop:Event" nodeName="devdays-2014">
+   <properties>
+    <title>DevDays 2014</title>
+    <eventDate __type="object" __classname="DateTime">
+     <dateTime>2014-06-21T00:00:00+02:00</dateTime>
+    </eventDate>
+   </properties>
+  </node>
+  <node identifier="4cdbcdab-ce81-0db5-0178-0442d04e46c0" type="DevDays.NeosWorkshop:Event" nodeName="foo">
+   <properties>
+    <title>foo</title>
+   </properties>
+  </node>
+  <node identifier="50c1ba32-2b5c-23d4-8619-8f7fd08a1877" type="DevDays.NeosWorkshop:Event" nodeName="boom">
+   <properties>
+    <title>T3DD14 is cool</title>
+    <eventDate __type="object" __classname="DateTime">
+     <dateTime>2014-06-20T00:00:00+02:00</dateTime>
+    </eventDate>
+   </properties>
+   <node identifier="bd4a8aef-4a49-9066-85c5-f4dd4e147782" type="TYPO3.Neos:ContentCollection" nodeName="main">
+    <node identifier="f575936e-eb33-15c9-ee88-e63874505d87" type="TYPO3.Neos.NodeTypes:Text" nodeName="node-53a5970e31124">
+     <properties>
+      <text><![CDATA[<p>TYPO3 Developer Days near Eindhoven roxck a lot and I am really happy to talk to all of you now.</p>]]></text>
+     </properties>
+    </node>
+    <node identifier="6f70d5e6-8628-0e4a-5f20-72148dac11aa" type="TYPO3.NeosDemoTypo3Org:YouTube" nodeName="node-53a59728197b6">
+     <properties>
+      <video>7rwlGmV3U-M</video>
+      <width>400</width>
+      <height>300</height>
+     </properties>
+    </node>
+   </node>
+  </node>
  </site>
 </root>
