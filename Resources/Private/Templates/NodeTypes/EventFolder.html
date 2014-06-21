@@ -1,5 +1,6 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace typo3cr=TYPO3\TYPO3CR\ViewHelpers}
 <section class="beige-bg">
 	<div class="container">
 		<div class="row">
@@ -8,16 +9,18 @@
 			</div>
 		</div>
 		<div class="row">
-			<f:for each="{events}" as="event">
-				<ts:render path="eventRenderer" context="{node: event}" />
-				<f:section name="singleEvent">
-					<div class="article-list-element">
-						<h2>{title}</h2>
-						<p>{eventDate -> f:format.date()}</p>
-						<p><a class="btn btn-default" href="{neos:uri.node(node: node)}">Details about this</a></p>
-					</div>
-				</f:section>
-			</f:for>
+			<typo3cr:widget.paginate nodes="{events}" as="paginatedEvents" configuration="{itemsPerPage: 3}">
+				<f:for each="{paginatedEvents}" as="event">
+					<ts:render path="eventRenderer" context="{node: event}" />
+					<f:section name="singleEvent">
+						<div class="article-list-element">
+							<h2>{title}</h2>
+							<p>{eventDate -> f:format.date()}</p>
+							<p><a class="btn btn-default" href="{neos:uri.node(node: node)}">Details about this</a></p>
+						</div>
+					</f:section>
+				</f:for>
+			</typo3cr:widget.paginate>
 		</div>
 	</div>
 </section>
