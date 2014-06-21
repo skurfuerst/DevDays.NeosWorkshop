@@ -36,10 +36,13 @@
   properties:
     numberOfUpcomingEvents:
       type: integer
+      validation:
+        'TYPO3.Neos/Validation/NotEmptyValidator': []
+        'TYPO3.Neos/Validation/IntegerValidator': []
       ui:
+        label: 'Number of upcoming events'
         reloadIfChanged: TRUE
         inspector:
-          label: 'Number of upcoming events'
           group: 'events'
 
 

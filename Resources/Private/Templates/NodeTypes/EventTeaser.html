@@ -6,9 +6,13 @@
 		<f:for each="{events}" as="event" iteration="iteration">
 			<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
 				<neos:link.node node="{event}">
-					<media:image asset="{event.properties.eventImage}" alt="a totally stupid picture" />
+					<f:if condition="{event.properties.eventImage}">
+						<media:image asset="{event.properties.eventImage}" alt="a totally nice picture" />
+					</f:if>
+
 					<div class="carousel-caption">
 						<h3>{event.properties.title}</h3>
+						<div>{event.properties.eventDate -> f:format.date()}</div>
 					</div>
 				</neos:link.node>
 			</div>
