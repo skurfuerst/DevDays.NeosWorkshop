@@ -1,6 +1,6 @@
 
-
-'DevDays.NeosWorkshop:EventTeaser':
+'DevDays.NeosWorkshop:AbstractEventTeaser':
+  abstract: TRUE
   superTypes: ['TYPO3.Neos:Content']
   ui:
     label: 'Event Teaser'
@@ -9,6 +9,11 @@
         'events':
           label: 'Events'
           position: 10
+
+
+
+'DevDays.NeosWorkshop:EventTeaser':
+  superTypes: ['DevDays.NeosWorkshop:AbstractEventTeaser']
 
   properties:
     events:
