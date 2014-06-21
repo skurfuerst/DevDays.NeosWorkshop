@@ -1,3 +1,52 @@
+
+
+'DevDays.NeosWorkshop:EventTeaser':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    label: 'Event Teaser'
+    inspector:
+      groups:
+        'events':
+          label: 'Events'
+          position: 10
+
+  properties:
+    events:
+      type: references # super cool black magic
+      ui:
+        reloadIfChanged: TRUE
+        inspector:
+          label: 'Events to show'
+          group: 'events'
+          editorOptions:
+            nodeTypes: ['DevDays.NeosWorkshop:Event']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 "TYPO3.Neos.NodeTypes:Page":
   ui:
     inspector:
@@ -231,3 +280,4 @@
               '25-25-25-25': ~
               '3-3-3-3':
                 label: '25% / 25% / 25% / 25%'
+

@@ -1,0 +1,24 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+	<div class="carousel-inner">
+		<f:for each="{events}" as="event" iteration="iteration">
+			<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
+				<neos:link.node node="{event}">
+					<media:image asset="{event.properties.eventImage}" alt="a totally stupid picture" />
+					<div class="carousel-caption">
+						<h3>{event.properties.title}</h3>
+					</div>
+				</neos:link.node>
+			</div>
+		</f:for>
+	</div>
+
+	<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>

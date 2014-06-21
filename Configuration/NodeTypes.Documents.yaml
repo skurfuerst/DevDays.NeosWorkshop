@@ -33,6 +33,15 @@
         inspector:
           group: 'eventProperties'
 
+    'eventImage':
+      type: 'TYPO3\Media\Domain\Model\ImageVariant'
+      ui:
+        label: 'Event Image'
+        reloadIfChanged: true
+        inspector:
+          group: 'eventProperties'
+
+
 'DevDays.NeosWorkshop:EventFolder':
   superTypes: ['TYPO3.Neos:Document']
 
