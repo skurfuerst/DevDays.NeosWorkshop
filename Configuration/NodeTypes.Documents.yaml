@@ -1,0 +1,28 @@
+
+
+
+
+'DevDays.NeosWorkshop:Event':
+  superTypes: ['TYPO3.Neos:Document']
+
+  childNodes:
+    'main':
+      type: 'TYPO3.Neos:ContentCollection'
+
+  ui:
+    label: 'Coffee Roasting Event'
+    icon: 'icon-columns'
+    inspector:
+      groups:
+        eventProperties:
+          label: 'Event Properties'
+          position: 1
+
+  properties:
+    eventDate:
+      type: date
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Event Date'
+        inspector:
+          group: 'eventProperties'

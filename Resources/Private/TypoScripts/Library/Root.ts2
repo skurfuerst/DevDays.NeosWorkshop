@@ -1,3 +1,10 @@
+
+
+include: Documents/Event.ts2
+# you can also reference other packages here by using:
+# resource://[Your.Package.Key]/.... syntax
+
+
 /**
  * Root TypoScript template for the Neos Coffee Roastery site
  */

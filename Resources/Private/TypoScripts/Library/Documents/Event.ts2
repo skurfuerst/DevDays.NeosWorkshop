@@ -1,0 +1,25 @@
+
+
+# TypoScript is object oriented.
+# ... based on prototypes (like a "class")
+# ... like "lib.*" in TYPO3 CMS
+
+# like "class Event extends Template"
+prototype(DevDays.NeosWorkshop:Event) < prototype(TYPO3.TypoScript:Template) {
+	templatePath = 'resource://DevDays.NeosWorkshop/Private/Templates/NodeTypes/Event.html'
+
+	eventDate = ${q(node).property('eventDate')}
+}
+
+
+# "PrimaryContent" is a "Case" TypoScript object.
+# like a big "Switch / Case / If" Statement.
+# ... is a "Decider" waht to render
+prototype(TYPO3.Neos:PrimaryContent).coffeeEvent {
+
+	# IF "we're on a coffee event document"
+	condition = ${q(node).is('[instanceof DevDays.NeosWorkshop:Event]')}
+
+	# THEN "we want to render ..."
+	type = 'DevDays.NeosWorkshop:Event'
+}
