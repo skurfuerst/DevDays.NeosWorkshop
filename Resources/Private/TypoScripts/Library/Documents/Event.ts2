@@ -14,14 +14,10 @@ prototype(DevDays.NeosWorkshop:Event) < prototype(TYPO3.TypoScript:Template) {
 
 	content = TYPO3.Neos:ContentCollection {
 		nodePath = 'main'
+
+		@cache.mode = 'cached'
 	}
 
-	@cache {
-		mode = 'uncached'
-		context {
-			1 = 'node'
-		}
-	}
 }
 
 
