@@ -4,5 +4,6 @@ prototype(DevDays.NeosWorkshop:UpcomingEventTeaser) >
 
 
 prototype(DevDays.NeosWorkshop:UpcomingEventTeaser) < prototype(DevDays.NeosWorkshop:EventTeaser) {
-	# customize me
+	numberOfUpcomingEvents = ${q(node).property('numberOfUpcomingEvents')}
+	events = ${Search.query(site).nodeType("DevDays.NeosWorkshop:Event").sortDesc('eventDate').limit(this.numberOfUpcomingEvents).execute()}
 }
