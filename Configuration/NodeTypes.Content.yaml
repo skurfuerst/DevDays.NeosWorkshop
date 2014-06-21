@@ -3,7 +3,6 @@
   abstract: TRUE
   superTypes: ['TYPO3.Neos:Content']
   ui:
-    label: 'Event Teaser'
     inspector:
       groups:
         'events':
@@ -14,6 +13,8 @@
 
 'DevDays.NeosWorkshop:EventTeaser':
   superTypes: ['DevDays.NeosWorkshop:AbstractEventTeaser']
+  ui:
+    label: 'Event Teaser'
 
   properties:
     events:
@@ -27,7 +28,19 @@
             nodeTypes: ['DevDays.NeosWorkshop:Event']
 
 
+'DevDays.NeosWorkshop:UpcomingEventTeaser':
+  superTypes: ['DevDays.NeosWorkshop:AbstractEventTeaser']
+  ui:
+    label: 'Upcoming Event Teaser'
 
+  properties:
+    numberOfUpcomingEvents:
+      type: integer
+      ui:
+        reloadIfChanged: TRUE
+        inspector:
+          label: 'Number of upcoming events'
+          group: 'events'
 
 
 

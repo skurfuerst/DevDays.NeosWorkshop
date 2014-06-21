@@ -2,6 +2,7 @@
 
 include: Documents/Event.ts2
 include: Documents/EventFolder.ts2
+include: Documents/UpcomingEventTeaser.ts2
 # you can also reference other packages here by using:
 # resource://[Your.Package.Key]/.... syntax
 
