@@ -16,6 +16,9 @@ prototype(DevDays.NeosWorkshop:EventFolder) < prototype(TYPO3.TypoScript:Templat
 			@position = 'end 9999'
 			condition = TRUE
 
+			# "TRICK" in Neos 1.1, not needed anymore for Master
+			renderPath = 'renderer'
+
 			renderer = TYPO3.TypoScript:Template {
 				templatePath = 'resource://DevDays.NeosWorkshop/Private/Templates/NodeTypes/EventFolder.html'
 				sectionName = 'singleEvent'
