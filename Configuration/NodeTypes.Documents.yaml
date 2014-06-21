@@ -19,6 +19,12 @@
           position: 1
 
   properties:
+    title:
+      ui:
+        inlineEditable: TRUE
+        inspector:
+          group: ~
+
     eventDate:
       type: date
       ui:
